@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //7a 7b 7c
+        function greet(name){
+            if(name==undefined){
+                console.log("Hello there")
+            }
+            else{
+                console.log(`hello ${name}`)
+            }
+            
+        }
+        greet()
+        //7d 7e 7f
+        function convertTemperature(numb,unit){
+            if(unit=="C"){
+                console.log(`Temperature in Fahrenheit: ${numb*9/5+32}`)
+            }
+            else if(unit=="F"){
+                console.log(`Temperature in Celsius: ${(numb-32)*5/9}`)
+            }
+        }
+        
+    </script>
+</body>
+</html>

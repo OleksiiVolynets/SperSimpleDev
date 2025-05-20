@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 8a 8b 8c
+        const product={
+            name:"Basketball",
+            price: 2095
+        }
+        console.log(product.name)
+        product.price+=500
+        console.log(product.price)
+        product["dlivery-time"]='3 days'
+        console.log(product)
+        // 8d
+        const produc2={
+            name:"Apple",
+            price: 1000,
+        }
+        const product3={
+            name:"Android",
+            price:500
+        }
+        let comp=(a,b)=>a.price>b.price?`${a.name} is less expensive `:`${b.name} is less expensive `
+        console.log(comp(produc2,product3))
+        //8g
+        const text="test"
+        console.log(text.repeat(2))
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        
+    </style>
+</head>
+<body>
+    <button onclick="subscribe()">Subscribe</button>
+    <p>Amazon Shipping Calculation</p>
+    <p>Orders under 40$=+$10 shipping</p>
+    <p>Orders over 40$=FREE shipping</p>
+    <input type="text" id="price" placeholder="Enter the price" onkeydown="if(event.key==='Enter'){calculate()}">
+    <button onclick="calculate()">Calculate</button>
+    <p id="result"></p>
+    <script>
+        function subscribe(){
+            const b=document.querySelector('button')
+            if(b.innerText==='Subscribe'){
+                b.innerText='Subscribed'
+                b.style.backgroundColor='black'
+                b.style.color='white'
+            }
+            else{
+                b.innerText='Subscribe'
+                b.style.backgroundColor='#333'
+            }
+        }
+        function calculate(){
+            const price=document.getElementById('price').value
+            if(parseFloat(price)<40){
+                document.getElementById('result').innerHTML=`Your order is $${parseFloat(price)+10}`
+            }
+            else{
+                document.getElementById('result').innerHTML=`Your order is $${parseFloat(price)}`
+            }
+        }
+    </script>
+</body>
+</html>
